@@ -1,11 +1,7 @@
 import '@/styles/globals.css'
-import { useEffect } from 'react';
-import { setupAnalytics } from "../analytics"
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App({ Component, pageProps }) {
-  useEffect(() => {
-    setupAnalytics();
-  }, []);
   return<Component {...pageProps} />
   
 }
